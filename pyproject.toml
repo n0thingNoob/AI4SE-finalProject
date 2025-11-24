@@ -1,0 +1,36 @@
+[tool.ruff]
+# Ruff configuration: Fast Python linter
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+# Enable rule sets
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # Line length (controlled by line-length)
+    "B008",  # Default arguments in function calls
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["tests"]
+
+[tool.pylint.main]
+# Pylint configuration (optional, if using pylint)
+max-line-length = 120
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.bandit]
+# Bandit security scan configuration (optional)
+exclude_dirs = ["tests"]
+skips = ["B101", "B601"]  # Skip assert and shell injection checks (test environment)
+
