@@ -1,0 +1,21 @@
+{
+  "ticker": "TQQQ",
+  "market_analysis": {
+    "sentiment": "Bullish",
+    "volatility_level": "High",
+    "key_observation": "Over the past 12 months, TQQQ has gained roughly 20–25% but sold off about 14% in the last month while implied volatility sits near the top of its 1-year range, indicating a bullish yet very high-volatility tech-led environment."
+  },
+  "strategy_logic": {
+    "strategy_name": "TQQQ_Bullish_Pullback_SMA_BBands_RSI",
+    "indicators_used": [
+      "SMA(50)",
+      "BollingerBands(20, 2)",
+      "RSI(14)"
+    ],
+    "entry_condition": "On daily data for TQQQ, open a long position at bar t when ALL of the following are true using indicator values at bar t: (1) Close[t] > SMA50[t] (price is above its 50-day simple moving average, indicating an intermediate-term uptrend); (2) Close[t-1] < LowerBB20_2[t-1] AND Close[t] > LowerBB20_2[t] (today the close has crossed back above the lower Bollinger Band after closing below it yesterday, i.e., a sharp pullback reverting back into the band within the uptrend); (3) RSI14[t] >= 35 AND RSI14[t] <= 55 (RSI is in a mildly oversold-to-neutral range, confirming a pullback but avoiding deeply oversold breakdowns).",
+    "exit_condition": "Close the long position at bar t when ANY of the following are true: (1) Close[t] < SMA50[t] (price closes back below the 50-day SMA, signaling a potential end to the intermediate uptrend); (2) RSI14[t] >= 70 (RSI reaches traditional overbought territory, suggesting exhaustion of the swing); (3) Close[t-1] > MiddleBB20_2[t-1] AND Close[t] < MiddleBB20_2[t] (the close crosses down through the middle Bollinger Band, equivalent to a 20-day SMA breakdown in short-term momentum).",
+    "stop_loss_pct": 0.1,
+    "take_profit_pct": 0.25
+  },
+  "reasoning": "TQQQ is a 3× leveraged Nasdaq-100 ETF that has produced strong double-digit 1-year returns but with extremely high realized and implied volatility, including a sharp one-month drawdown, so a dip-buying approach that only participates when price is in an established uptrend (Close > SMA50) and has just rebounded from the lower Bollinger Band helps exploit bullish mean-reversion swings while avoiding prolonged downtrends; pairing this with RSI-based confirmation and relatively tight fixed 10% stop-loss and 25% take-profit levels is appropriate for a vehicle whose triple leverage amplifies both upside moves and drawdowns."
+}

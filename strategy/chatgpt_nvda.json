@@ -1,0 +1,21 @@
+{
+  "ticker": "NVDA",
+  "market_analysis": {
+    "sentiment": "Bullish",
+    "volatility_level": "High",
+    "key_observation": "Over the last 12 months NVDA has gained roughly 30%, climbing from the high-$130s in late 2024 to around $180 while recently pulling back about 10–15% from its late-October all-time high amid post-earnings volatility.  [oai_citation:0‡Digrin](https://www.digrin.com/stocks/detail/NVDA/price?utm_source=chatgpt.com)"
+  },
+  "strategy_logic": {
+    "strategy_name": "NVDA_Bullish_Pullback_BBands_RSI",
+    "indicators_used": [
+      "SMA(50)",
+      "BollingerBands(20, 2)",
+      "RSI(14)"
+    ],
+    "entry_condition": "At bar t, open a new long position of fixed size if and only if: (1) there is currently no open position; (2) Close[t-1] > SMA50[t-1] (price is in a medium-term bullish trend); (3) Close[t-1] <= LowerBB20_2[t-1] * 1.01 (price is at or within 1% above the lower 20-period, 2-std Bollinger Band, indicating a volatility-driven pullback); and (4) RSI14[t-1] >= 30 AND RSI14[t-1] <= 45 (pullback into mildly oversold but not deeply broken territory).",
+    "exit_condition": "At bar t, fully close any open long position if ANY of the following are true based on data from bar t-1: (1) Close[t-1] < SMA50[t-1] (bullish trend filter broken); OR (2) RSI14[t-1] >= 70 (overbought momentum exhaustion); OR (3) Close[t-1] >= entry_price * (1 + 0.18) (hard take-profit reached); OR (4) Close[t-1] <= entry_price * (1 - 0.08) (hard stop-loss breached).",
+    "stop_loss_pct": 0.08,
+    "take_profit_pct": 0.18
+  },
+  "reasoning": "NVDA remains in a powerful AI-led secular uptrend with strong fundamentals after its latest quarter delivered ~62% year-on-year revenue growth, raised guidance to about $65B next quarter, and record data-center sales, all of which reassured most analysts and led to a wave of higher price targets despite ongoing 'AI bubble' debates.  [oai_citation:1‡Financial Times](https://www.ft.com/content/24c50fe0-3ea4-4347-851c-8635d6ef02c1?utm_source=chatgpt.com) At the same time, 30-day historical and options-implied volatility around 40–50% and elevated IV percentile readings show that short-term price swings are large relative to typical mega-cap stocks, making it attractive to systematically buy volatility-induced dips rather than chase breakouts.  [oai_citation:2‡Barchart.com](https://www.barchart.com/stocks/quotes/NVDA/volatility-charts?utm_source=chatgpt.com) The chosen rules therefore (i) require price to be above the 50-day SMA to stay aligned with the dominant bullish trend, (ii) use Bollinger Bands plus an RSI(14) band (30–45) to identify controlled pullbacks instead of breakdowns, and (iii) pair those entries with relatively wide but explicit 8% stop-loss and 18% take-profit levels that reflect NVDA’s high volatility while targeting asymmetric upside in a still-bullish, news-sensitive regime."
+}
