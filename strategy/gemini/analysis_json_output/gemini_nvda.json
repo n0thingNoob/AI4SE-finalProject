@@ -1,0 +1,20 @@
+{
+    "ticker": "NVDA",
+    "market_analysis": {
+      "sentiment": "Bullish (Long-term) / Correction (Short-term)",
+      "volatility_level": "High",
+      "key_observation": "Despite beating Q3 earnings expectations with $57B revenue, NVDA is experiencing a 'sell-the-news' correction, testing key support levels around $180 within a broader uptrend."
+    },
+    "strategy_logic": {
+      "strategy_name": "NVDA_Trend_Dip_Buyer_2025",
+      "indicators_used": [
+        "SMA(100)",
+        "RSI(14)"
+      ],
+      "entry_condition": "self.data.Close[-1] > self.sma100[-1] and self.rsi[-1] < 45",
+      "exit_condition": "self.rsi[-1] > 70 or self.data.Close[-1] < self.sma100[-1]",
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.15
+    },
+    "reasoning": "NVDA remains in a long-term uptrend (Price > SMA 100) driven by strong AI infrastructure demand (Blackwell chips). The current pullback post-earnings offers a mean-reversion entry point. We use RSI < 45 to identify the dip and SMA(100) to ensure we are trading with the primary trend."
+  }
