@@ -1,0 +1,21 @@
+{
+    "ticker": "TQQQ",
+    "market_analysis": {
+      "sentiment": "Bearish (Short-term) / Bullish (Long-term)",
+      "volatility_level": "High",
+      "key_observation": "The Nasdaq-100 is undergoing a sharp correction (tech rout) driven by 'sell-the-news' reaction to NVDA earnings, pushing TQQQ into deep oversold territory (RSI < 30) while still holding above key long-term support."
+    },
+    "strategy_logic": {
+      "archetype_selected": "Type C: Hybrid (Trend + Dip)",
+      "strategy_name": "TQQQ_Leveraged_Mean_Reversion_2025",
+      "indicators_used": [
+        "SMA(200) - Long-term Trend Floor",
+        "RSI(14) - Deep Oversold Trigger"
+      ],
+      "entry_condition": "Close > SMA(200) AND RSI(14) < 35",
+      "exit_condition": "RSI(14) > 65 OR Close < SMA(200)",
+      "stop_loss_pct": 0.10,
+      "take_profit_pct": 0.20
+    },
+    "reasoning": "TQQQ is a 3x leveraged instrument, making it highly dangerous to trade against the primary trend. The 'Type C' strategy filters for a positive long-term trend (Price > SMA200) to ensure we aren't buying into a bear market crash, while the aggressive RSI < 35 entry captures the sharp, fear-driven capitulation dips typical of the current high-volatility regime."
+  }

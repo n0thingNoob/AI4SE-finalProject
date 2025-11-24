@@ -1,0 +1,21 @@
+{
+    "ticker": "TSLA",
+    "market_analysis": {
+      "sentiment": "Bearish (Short-term) / Bullish (Long-term)",
+      "volatility_level": "High",
+      "key_observation": "TSLA has formed a double-top pattern and is correcting from recent highs ($488) towards trend support ($360-$370), creating a 'dip in uptrend' scenario."
+    },
+    "strategy_logic": {
+      "archetype_selected": "Type C: Hybrid (Trend + Dip)",
+      "strategy_name": "TSLA_Dynamic_Trend_Dip_2025",
+      "indicators_used": [
+        "SMA(100) - Long-term Trend Filter",
+        "RSI(14) - Momentum/Dip Detector"
+      ],
+      "entry_condition": "Close > SMA(100) AND RSI(14) < 40",
+      "exit_condition": "RSI(14) > 70 OR Close < SMA(100)",
+      "stop_loss_pct": 0.08,
+      "take_profit_pct": 0.20
+    },
+    "reasoning": "Data shows TSLA is in a macro uptrend (Price ~$391 vs SMA100 ~$360) but experiencing short-term weakness (down ~10% recently). The Type C archetype capitalizes on this by using SMA(100) to confirm the primary bullish trend remains intact while using RSI < 40 to snipe the entry at oversold levels near support, avoiding the risk of catching a falling knife in a full reversal."
+  }
