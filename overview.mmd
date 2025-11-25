@@ -1,0 +1,76 @@
+%%{init: {
+  "flowchart": {
+    "diagramPadding": 10,   
+    "nodeSpacing": 20,      
+    "rankSpacing": 30       
+  }
+}}%%
+flowchart TB
+    %% Input Sources
+    UserInput(("User selects ticker + prompts")):::input
+    WebSource(("External data sources<br/>(Yahoo Finance / News / Search API)")):::input
+
+    %% Analyst phase
+    subgraph Phase1["Phase 1: Market Analysis & Strategy Formulation"]
+        direction TB
+        AnalystPrompt["Prompt: Market Analysis + Strategy Menu"]:::prompt
+        AnalystAgent["🤖 Analyst Agent (Orchestrator)"]:::agent
+        AnalystModelGPT["Model: GPT-5.1"]:::model
+        AnalystModelGemini["Model: Gemini 3 Pro"]:::model
+        AnalystModelDeepSeek["Model: DeepSeek V3.2"]:::model
+
+        JSONArtifact("Standardized Strategy Blueprint (JSON)<br/>Sentiment + Indicators + Logic"):::artifact
+    end
+
+    subgraph Phase2["Phase 2: Constrained Code Generation"]
+        direction TB
+
+        Phase2Start(("Phase 2 Start")):::anchor
+        CoderPrompt["Prompt: Moomoo API Constraints + Pure Python"]:::prompt
+
+        JSONArtifact --> Phase2Start
+        Phase2Start --> CoderPrompt
+
+        subgraph MultiModel["Multi-Model Comparison"]
+            direction LR
+            CoderGPT["🤖 Coder: GPT-5.1"]:::agent
+            CoderGemini["🤖 Coder: Gemini 3 Pro"]:::agent
+            CoderDeepSeek["🤖 Coder: DeepSeek V3.2"]:::agent
+        end
+
+        JSONArtifact --> CoderGPT
+        JSONArtifact --> CoderGemini
+        JSONArtifact --> CoderDeepSeek
+
+        CoderPrompt -.-> CoderGPT
+        CoderPrompt -.-> CoderGemini
+        CoderPrompt -.-> CoderDeepSeek
+    end
+
+    ScriptGPT["Generated Script A (GPT)"]:::artifact
+    ScriptDeep["Generated Script B (DeepSeek)"]:::artifact
+    ScriptGemini["Generated Script C (Gemini)"]:::artifact
+    MoomooPlatform(("🐂 Moomoo Desktop Algo Sandbox")):::platform
+
+    UserInput --> AnalystAgent
+    WebSource --> AnalystAgent
+    AnalystAgent --> JSONArtifact
+    AnalystAgent --> AnalystModelGPT
+    AnalystAgent --> AnalystModelGemini
+    AnalystAgent --> AnalystModelDeepSeek
+
+    CoderGPT --> ScriptGPT
+    CoderGemini --> ScriptGemini
+    CoderDeepSeek --> ScriptDeep
+
+    ScriptGPT --> MoomooPlatform
+    ScriptGemini --> MoomooPlatform
+    ScriptDeep --> MoomooPlatform
+
+    classDef input fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,rx:5,ry:5,color:#000;
+    classDef agent fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,rx:5,ry:5,color:#000;
+    classDef prompt fill:#ffe0b2,stroke:#f57c00,stroke-width:1px,stroke-dasharray:3 3,color:#000;
+    classDef artifact fill:#dcedc8,stroke:#558b2f,stroke-width:3px,color:#000;
+    classDef platform fill:#cfd8dc,stroke:#455a64,stroke-width:3px,rx:5,ry:5,color:#000;
+    classDef model fill:#ffffff,stroke:#888888,stroke-width:1px,color:#000,rx:4,ry:4;
+    classDef anchor fill:none,stroke:none;
