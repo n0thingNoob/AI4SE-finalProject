@@ -1,0 +1,22 @@
+{
+  "ticker": "TSLA",
+  "market_analysis": {
+    "sentiment": "Bearish",
+    "volatility_level": "High",
+    "key_observation": "TSLA is in a prolonged downtrend with elevated volatility, characterized by sharp bear market rallies that quickly reverse."
+  },
+  "strategy_logic": {
+    "archetype_selected": "Type B: Mean Reversion",
+    "strategy_name": "TSLA_Bear_Market_Rallies_RSI",
+    "indicators_used": [
+      "RSI(14) - for oversold/overbought signals",
+      "SMA(50) - for resistance levels",
+      "Bollinger Bands(20,2) - for volatility context"
+    ],
+    "entry_condition": "RSI(14) < 30 AND Current Price > Lower Bollinger Band AND Volume > 1.5 * 20-day Average Volume",
+    "exit_condition": "RSI(14) > 65 OR Current Price > SMA(50) OR Current Price < (Entry Price * 0.93)",
+    "stop_loss_pct": 0.07,
+    "take_profit_pct": 0.12
+  },
+  "reasoning": "TSLA has shown consistent pattern of sharp bear market rallies where oversold conditions (RSI<30) lead to 10-15% bounces that typically fail at the 50-day moving average resistance. The high volatility environment makes these mean reversion moves profitable, while the strict exit conditions protect against continued downtrends. This strategy capitalizes on TSLA's characteristic violent counter-trend moves within the broader bear market structure."
+}

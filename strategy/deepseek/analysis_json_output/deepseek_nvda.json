@@ -1,0 +1,21 @@
+{
+  "ticker": "NVDA",
+  "market_analysis": {
+    "sentiment": "Bullish",
+    "volatility_level": "High",
+    "key_observation": "Strong AI-driven uptrend with periodic sharp pullbacks due to elevated valuations and high expectations."
+  },
+  "strategy_logic": {
+    "archetype_selected": "Type C: Hybrid (Trend + Dip)",
+    "strategy_name": "NVDA_Bull_Pullback_RSI_Strategy",
+    "indicators_used": [
+      "SMA(100) - for primary trend confirmation",
+      "RSI(14) - for timing entries on pullbacks"
+    ],
+    "entry_condition": "Current Price > SMA(100) AND RSI(14) < 45",
+    "exit_condition": "RSI(14) > 70 OR Current Price < SMA(100) OR 15% profit target reached",
+    "stop_loss_pct": 0.05,
+    "take_profit_pct": 0.15
+  },
+  "reasoning": "NVDA has demonstrated strong bullish momentum driven by AI dominance, but experiences frequent 5-15% pullbacks due to high volatility and valuation concerns. The Hybrid approach allows participation in the primary uptrend while avoiding buying at overextended levels. Using SMA(100) ensures we only trade in the direction of the long-term trend, while RSI(14) < 45 provides entry opportunities during healthy pullbacks within the broader uptrend."
+}

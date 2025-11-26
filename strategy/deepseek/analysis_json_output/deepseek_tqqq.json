@@ -1,0 +1,21 @@
+{
+  "ticker": "TQQQ",
+  "market_analysis": {
+    "sentiment": "Bullish",
+    "volatility_level": "High",
+    "key_observation": "Strong uptrend with significant volatility and frequent pullbacks due to leveraged nature."
+  },
+  "strategy_logic": {
+    "archetype_selected": "Type C: Hybrid (Trend + Dip)",
+    "strategy_name": "TQQQ_Leveraged_Uptrend_Pullback",
+    "indicators_used": [
+      "SMA(50) - for primary trend direction",
+      "RSI(14) - for timing entries on dips"
+    ],
+    "entry_condition": "Current Price > SMA(50) AND RSI(14) < 42",
+    "exit_condition": "RSI(14) > 68 OR Current Price < SMA(50)",
+    "stop_loss_pct": 0.08,
+    "take_profit_pct": 0.12
+  },
+  "reasoning": "TQQQ exhibits strong bullish momentum over the 12-month timeframe but experiences amplified volatility and frequent 5-15% pullbacks due to its 3x leveraged structure. The Hybrid strategy allows participation in the primary uptrend while avoiding buying at overextended levels. Using SMA(50) confirms the intermediate-term trend remains intact, while RSI(42) entry threshold accounts for TQQQ's tendency for deeper pullbacks than the underlying QQQ. The wider stop loss (8%) accommodates the ETF's inherent volatility while maintaining favorable risk-reward ratios."
+}
