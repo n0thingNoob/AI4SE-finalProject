@@ -1,0 +1,10 @@
+model,file,strategy_name,overall,robustness,quality_overall,structure,error_handling,documentation,complexity,best_practices
+deepseek,strategy\deepseek\generated_trading_code\deepseek_nvda.py,deepseek_nvda,75.25,100.0,58.75,100.0,45.0,0.0,60.0,74.0
+deepseek,strategy\deepseek\generated_trading_code\deepseek_tqqq.py,deepseek_tqqq,74.65,100.0,57.75,100.0,39.0,0.0,60.0,76.0
+deepseek,strategy\deepseek\generated_trading_code\deepseek_tsla.py,deepseek_tsla,75.25,100.0,58.75,100.0,57.0,0.0,40.0,74.0
+gemini,strategy\gemini\generated_trading_code\gemini_nvda.py,gemini_nvda,76.6,100.0,61.0,100.0,39.0,30.0,60.0,71.0
+gemini,strategy\gemini\generated_trading_code\gemini_tqqq.py,gemini_tqqq,76.3,100.0,60.5,100.0,39.0,30.0,60.0,69.0
+gemini,strategy\gemini\generated_trading_code\gemini_tsla.py,gemini_tsla,76.6,100.0,61.0,100.0,39.0,30.0,60.0,71.0
+gpt,strategy\gpt\generated_trading_code\chatgpt_nvda.py,chatgpt_nvda,73.6,100.0,56.0,100.0,60.0,0.0,20.0,72.0
+gpt,strategy\gpt\generated_trading_code\chatgpt_tqqq.py,chatgpt_tqqq,73.9,100.0,56.5,90.0,60.0,20.0,20.0,70.0
+gpt,strategy\gpt\generated_trading_code\chatgpt_tsla.py,chatgpt_tsla,73.3,100.0,55.5,100.0,60.0,0.0,20.0,70.0

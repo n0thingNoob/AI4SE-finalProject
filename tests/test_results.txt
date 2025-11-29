@@ -1,0 +1,118 @@
+================================================================================
+Test Summary:
+  Total strategies: 9
+  Passed: 9
+  Failed: 0
+
+Overall Average Scores:
+  Overall: 75.05/100
+  Robustness: 100.00/100
+  Code Quality: 58.42/100
+
+================================================================================
+MODEL-SPECIFIC SCORING SUMMARY
+================================================================================
+
+GEMINI Model:
+  Total strategies: 3
+  Passed: 3
+  Failed: 0
+
+  Individual File Scores:
+    gemini_nvda.py:
+      Overall: 76.60/100
+      Robustness: 100.00/100
+      Code Quality: 61.00/100
+    gemini_tqqq.py:
+      Overall: 76.30/100
+      Robustness: 100.00/100
+      Code Quality: 60.50/100
+    gemini_tsla.py:
+      Overall: 76.60/100
+      Robustness: 100.00/100
+      Code Quality: 61.00/100
+
+  Average Scores:
+    Overall: 76.50/100
+    Robustness: 100.00/100
+    Code Quality: 60.83/100
+      - Structure: 100.00/100
+      - Error Handling: 39.00/100
+      - Documentation: 30.00/100
+      - Complexity: 60.00/100
+      - Best Practices: 70.33/100
+
+  Total Scores (Sum of 3 strategies, max: 300.00):
+    Overall: 229.50/300.00
+    Robustness: 300.00/300.00
+    Code Quality: 182.50/300.00
+
+GPT Model:
+  Total strategies: 3
+  Passed: 3
+  Failed: 0
+
+  Individual File Scores:
+    chatgpt_nvda.py:
+      Overall: 73.60/100
+      Robustness: 100.00/100
+      Code Quality: 56.00/100
+    chatgpt_tqqq.py:
+      Overall: 73.90/100
+      Robustness: 100.00/100
+      Code Quality: 56.50/100
+    chatgpt_tsla.py:
+      Overall: 73.30/100
+      Robustness: 100.00/100
+      Code Quality: 55.50/100
+
+  Average Scores:
+    Overall: 73.60/100
+    Robustness: 100.00/100
+    Code Quality: 56.00/100
+      - Structure: 96.67/100
+      - Error Handling: 60.00/100
+      - Documentation: 6.67/100
+      - Complexity: 20.00/100
+      - Best Practices: 70.67/100
+
+  Total Scores (Sum of 3 strategies, max: 300.00):
+    Overall: 220.80/300.00
+    Robustness: 300.00/300.00
+    Code Quality: 168.00/300.00
+
+DEEPSEEK Model:
+  Total strategies: 3
+  Passed: 3
+  Failed: 0
+
+  Individual File Scores:
+    deepseek_nvda.py:
+      Overall: 75.25/100
+      Robustness: 100.00/100
+      Code Quality: 58.75/100
+    deepseek_tqqq.py:
+      Overall: 74.65/100
+      Robustness: 100.00/100
+      Code Quality: 57.75/100
+    deepseek_tsla.py:
+      Overall: 75.25/100
+      Robustness: 100.00/100
+      Code Quality: 58.75/100
+
+  Average Scores:
+    Overall: 75.05/100
+    Robustness: 100.00/100
+    Code Quality: 58.42/100
+      - Structure: 100.00/100
+      - Error Handling: 47.00/100
+      - Documentation: 0.00/100
+      - Complexity: 53.33/100
+      - Best Practices: 74.67/100
+
+  Total Scores (Sum of 3 strategies, max: 300.00):
+    Overall: 225.15/300.00
+    Robustness: 300.00/300.00
+    Code Quality: 175.25/300.00
+
+================================================================================
