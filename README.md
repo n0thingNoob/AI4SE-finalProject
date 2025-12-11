@@ -1,6 +1,6 @@
 # AI-Generated Trading Strategy Quality Assessment Project
 
-A comprehensive framework for generating, testing, and evaluating AI-generated trading strategies using different LLM models (Gemini and GPT). This project includes automated code quality assessment, robustness testing, and comparative analysis between different AI models.
+A comprehensive framework for generating, testing, and evaluating AI-generated trading strategies using different LLM models (Gemini and GPT). This project includes automated code quality assessmen[...] 
 
 ## 📋 Table of Contents
 
@@ -343,7 +343,9 @@ GEMINI Model:
 
 ## 📄 License
 
-[Add your license information here]
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This project is released under the MIT License — see [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgments
 
@@ -356,4 +358,3 @@ GEMINI Model:
 - **Testing Framework**: See [tests/README.md](tests/README.md) for detailed testing documentation
 - **Code Generation Prompt**: See [prompt/code_generate_prompt.md](prompt/code_generate_prompt.md) for API reference
 - **Analysis Prompt**: See [prompt/analysis_prompt.md](prompt/analysis_prompt.md) for market analysis guidelines
-
